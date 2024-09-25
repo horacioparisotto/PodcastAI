@@ -75,21 +75,10 @@ const GenerateThumbnail = ({ setImage, setImageStorageId, image, imagePrompt, se
   //AI Thumbnail
   const generateImage = async () => {
     try {
-      const response = await handleGenerateThumbnail({ prompt: imagePrompt });
-      console.log({response});
-
+      const response = await handleGenerateThumbnail({ prompt: imagePrompt, apiKey: process.env.NEXT_PUBLIC_FREEPIK_API_KEY || '' });
       const imgResponse = await fetch(response);
-      console.log({imgResponse});
-
-
       const blob = await imgResponse.blob();
-      console.log({blob});
-
-      // const blob = new Blob([response], { type: 'image/png' });
-
       handleImage(blob, `thumbnail-${uuidv4()}`);
-
-      // setImage(`data:image/png;base64,${ response }`);
     } catch (error) { 
       console.log(error)
       toast({ title: 'Error generating thumbnail', variant: 'destructive' })
