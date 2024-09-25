@@ -2,12 +2,12 @@ import { action } from "./_generated/server";
 import { v } from "convex/values";
 
 export const generateThumbnailAction = action({
-    args: { prompt: v.string() },
-    handler: async (_, { prompt }) => {
+    args: { prompt: v.string(), apiKey: v.string() },
+    handler: async (_, { prompt, apiKey }) => {
         try {
             const options = {
                 method: 'POST',
-                headers: { 'x-freepik-api-key': `${process.env.FREEPIK_API_KEY}` /* FIX THIS */, 'Content-Type': 'application/json', Accept: 'application/json' },
+                headers: { 'x-freepik-api-key': `${apiKey}`, 'Content-Type': 'application/json', Accept: 'application/json' },
                 body: JSON.stringify({ prompt, num_images: 1 }),
             };
 
