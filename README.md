@@ -13,6 +13,7 @@ ShadCN
 Tailwind CSS
 
 🔋 Features
+
 👉 Robust Authentication: Secure and reliable login and registration for a seamless user experience.
 
 👉 Modern Home Page: Highlights trending podcasts with a sticky podcast player for uninterrupted listening.
