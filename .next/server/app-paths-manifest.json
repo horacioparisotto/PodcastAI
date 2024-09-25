@@ -1,4 +1,5 @@
 {
   "/(root)/page": "app/(root)/page.js",
+  "/(root)/podcasts/[podcastId]/page": "app/(root)/podcasts/[podcastId]/page.js",
   "/(root)/create-podcast/page": "app/(root)/create-podcast/page.js"
 }

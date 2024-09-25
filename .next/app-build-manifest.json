@@ -20,6 +20,11 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/(root)/create-podcast/page.js"
+    ],
+    "/(root)/podcasts/[podcastId]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(root)/podcasts/[podcastId]/page.js"
     ]
   }
 }
