@@ -1,0 +1,4 @@
+{
+  "/(root)/page": "app/(root)/page.js",
+  "/(root)/create-podcast/page": "app/(root)/create-podcast/page.js"
+}
